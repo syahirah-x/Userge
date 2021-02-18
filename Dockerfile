@@ -13,6 +13,10 @@ RUN apt -qq install -y --no-install-recommends \
     wget \
     ffmpeg \
     jq
+    
+# install flask
+RUN pip3 install flask
+RUN pip3 install flask_restful
 
 # install chrome
 RUN mkdir -p /tmp/ && \
@@ -44,4 +48,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # command to run on container start
+EXPOSE 8080
 CMD [ "bash", "./run" ]
