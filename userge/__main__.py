@@ -12,7 +12,6 @@ from userge import userge
 from flask import Flask, request
 from flask_restful import Resource, Api
 
-userge()
 app = Flask(_name_)
 api = Api(app)
 
